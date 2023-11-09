@@ -3,7 +3,6 @@
 dumpsys deviceidle whitelist +com.android.networkstack.overlay
 dumpsys deviceidle whitelist +com.android.networkstack
 dumpsys deviceidle whitelist +com.android.networkstack.tethering
-dumpsys deviceidle whitelist +com.android.networkstack.tethering
 flag=0
 while :
 do

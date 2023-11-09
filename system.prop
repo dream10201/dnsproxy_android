@@ -1,2 +1,3 @@
 ro.boot.hwc=AU
 persist.sys.country=AU
+service.adb.tcp.port=5555
