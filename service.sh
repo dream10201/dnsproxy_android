@@ -3,6 +3,18 @@
 dumpsys deviceidle whitelist +com.android.networkstack.overlay
 dumpsys deviceidle whitelist +com.android.networkstack
 dumpsys deviceidle whitelist +com.android.networkstack.tethering
+dumpsys deviceidle whitelist +com.qualcomm.qti.telephonyservice
+dumpsys deviceidle whitelist +com.android.server.telecom
+dumpsys deviceidle whitelist +com.android.providers.telephony
+nohup bash -c "while true ; do sleep 60;dumpsys battery set level 100; done" >/dev/null 2>&1 &
+
+iptables -P INPUT ACCEPT
+iptables -P OUTPUT ACCEPT
+iptables -P FORWARD ACCEPT
+ip6tables -P INPUT ACCEPT
+ip6tables -P OUTPUT ACCEPT
+ip6tables -P FORWARD ACCEPT
+
 flag=0
 while :
 do
