@@ -23,7 +23,7 @@ do
 		iptables -t nat -I OUTPUT -p udp --dport 53 -j DNAT --to 127.0.0.1:5353
 	fi
 
-	dnsproxy -l 127.0.0.1 -p 5353 --cache --cache-optimistic --http3 --all-servers -b 119.29.29.29 -f 120.80.80.80 -u https://cn-a.iqiqz.com/dns-query -u https://doh.apad.pro/dns-query -u https://2606:4700:4700::1111/dns-query -u https://2606:4700:4700::1111/dns-query -u https://2606:4700:4700::1001/dns-query
+	dnsproxy -l 127.0.0.1 -p 5353 --cache --cache-optimistic --http3 --all-servers -b 223.5.5.5 -b 119.29.29.29 -f 120.80.80.80 -u https://cn-a.iqiqz.com/dns-query -u https://doh.apad.pro/dns-query -u https://2606:4700:4700::1111/dns-query -u https://149.112.112.112/dns-query -u https://1.1.1.1/dns-query
 	
     sleep 5
 	if [ $flag -lt 10 ] ; then
